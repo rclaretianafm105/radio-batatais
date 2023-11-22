@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro Arquivo Rádio Batatais - 1978 a 2012</title>
+</head>
+<body>
+
+<h1>Cadastro Arquivo Rádio Batatais - 1978 a 2012</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Ano</th>
+      <th>Mês</th>
+      <th>Dia</th>
+      <th>Hora</th>
+      <th>Emissora</th>
+      <th>Programa</th>
+      <th>Apresentador</th>
+      <th>Trecho</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+<script>
+  // Carrega os dados do arquivo
+  const dados = [
+    {
+      ano: 1978,
+      mes: 1,
+      dia: 1,
+      hora: "00:00:00",
+      emissora: "Rádio Educadora Batatais",
+      programa: "Rádio Educadora FM 102,3 MHz 01/01/1978 - Domingo",
+      apresentador: 
+      trecho: "00:02:28",
+    },
+  ];
+
+  // Adiciona os dados ao tabela
+  for (const dado of dados) {
+    const linha = document.createElement("tr");
+
+    linha.innerHTML = `
+      <td>${dado.ano}</td>
+      <td>${dado.mes}</td>
+      <td>${dado.dia}</td>
+      <td>${dado.hora}</td>
+      <td>${dado.emissora}</td>
+      <td>${dado.programa}</td>
+      <td>${dado.apresentador}</td>
+      <td>${dado.trecho}</td>
+    `;
+
+    document.querySelector("tbody").appendChild(linha);
+  }
+</script>
+
+</body>
+</html>
